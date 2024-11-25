@@ -1,12 +1,13 @@
 import os
 from googleapiclient.discovery import build
 from google.oauth2.service_account import Credentials
-from dotenv import load_dotenv
+from dotenv import load_dotenv, dotenv_values
 
 # Load environment variables from .env file
 load_dotenv()
+config = dotenv_values(".env")
 # Spread sheet id to extract the values
-SPREADSHEET_ID = '1pTqSaWbTGITZRd6hteS2DN-0I1VY2ZWf1UJdcHCXwHY'
+SPREADSHEET_ID = config.get('SPREADSHEET_ID')
 # Credential path for the service account to get the access to the spreadsheet 
 service_account_file = 'utils//credential.json'
 # Scope of the spreadsheet
