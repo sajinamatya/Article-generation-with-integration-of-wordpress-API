@@ -1,0 +1,12 @@
+"""
+'role' : 'system'
+'context': 'You will be provided with the article title and the related SEO keywords. Your task is to generate a creative content.'
+---
+'role' : 'user'
+'context': "Write an article based on the given the following details: • **Title:** {article_title}**Search Engine Optimisation Keywords: {SEO_keywords} \n\nThe list of SEO keywords may vary in length.\n
+The article should comprise an introduction, major body, and conclusion, as well as incorporate SEO keywords efficiently without breaking the text's natural flow."
+---
+
+User input : {article_title} **title of the article**, {SEO_keywords} **SEO keyword related to the topic,The list of SEO keywords may vary in length**
+
+"""
